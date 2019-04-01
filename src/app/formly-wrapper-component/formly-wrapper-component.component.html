@@ -1,0 +1,15 @@
+Name Property: {{ name }}
+<div class="container">
+  <h2>DXP Studio</h2>
+  <div class="card">
+    <div class="card-header">Configure Component</div>
+    <div class="card-body">
+      <form [formGroup]="orderForm" (ngSubmit)="onSubmit(order)">
+        <formly-form [model]="order" [fields]="input">
+          <button mat-raised-button color="primary" type="submit">
+            Submit
+          </button>
+        </formly-form>
+      </form></div>
+  </div>
+</div>
