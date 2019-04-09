@@ -1,27 +1,32 @@
-# AngularCustomElements
+#Introduction
+This module is the wrapper over ngx-formly (created for generating forms from the provided schema). The purpose of publishing this module 
+is to use the capabilities of ngx-formly in any tech framework.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+#How to use this module
+At present we are generating a js file which will do the magic for you. 
+You just need to include this js file in the appropriate location of your project. In many case it is index.html file
 
-## Development server
+## Example
+### Use from unpkg.com
+```
+<script src="https://unpkg.com/formly-wrapper-angular-element@<version>/dist/angular-custom-elements/custom-formly-wrapper.js"></script>
+``` 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Local Version
+```
+<script src="<path_to_node_module/dist/angular-custom-elements/custom-formly-wrapper.js"></script>
+```
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+What is the selector to use this webcomponent?
+```
+<app-formly-wrapper @submittedData='submitEditedData($event)' :init="dataModel" :input="componentSchema"></app-formly-wrapper>
+```
 
-## Build
+# Properties
+##Inputs
+1. init: It is the model data which will be used to initialize the fields when form opens
+2. input: It is the schema against which you want to generate form
+#Output
+1. submittedData : Custom event which returns the updated form after submission
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

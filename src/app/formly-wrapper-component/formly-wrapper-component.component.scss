@@ -39,6 +39,14 @@
     .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
       background-color: #dd8b62;
   }
+  .form-submit-button {
+    float: right;
+    margin-top:15px;
+  }
+  .form-cancel-button {
+    float: right;
+    margin-top:15px;
+  }
 }
 
 .config-form-container {

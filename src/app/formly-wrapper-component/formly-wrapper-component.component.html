@@ -1,4 +1,3 @@
-Name Property: {{ name }}
 <div class="container">
   <h2>DXP Studio</h2>
   <div class="card">
@@ -6,9 +5,14 @@ Name Property: {{ name }}
     <div class="card-body">
       <form [formGroup]="orderForm" (ngSubmit)="onSubmit(order)">
         <formly-form [model]="order" [fields]="input">
-          <button mat-raised-button color="primary" type="submit">
-            Submit
-          </button>
+          <div class="row">
+            <div class="offset-md-8 col-md-2">
+              <button type="button" class="btn btn-outline-danger form-cancel-button" color="danger" (click)="onCancel()">Cancel</button>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-outline-primary form-submit-button" color="primary" type="submit">Submit</button>
+            </div>
+          </div>
         </formly-form>
       </form></div>
   </div>
